@@ -8,6 +8,8 @@ Qlik.then(function(q) {
     })
    
     var app = q.openApp('3f3a866b-238f-4d1a-8aeb-81e97756af7a', config);   
-    console.log(app)
+    console.log('From main', app)
+    
+    require('./otherfile');
    
 })

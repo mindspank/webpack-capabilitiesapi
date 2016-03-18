@@ -105,7 +105,9 @@
 	    })
 	   
 	    var app = q.openApp('3f3a866b-238f-4d1a-8aeb-81e97756af7a', config);   
-	    console.log(app)
+	    console.log('From main', app)
+	    
+	    __webpack_require__(9);
 	   
 	})
 
@@ -5751,6 +5753,19 @@
 	    isSecure: true,
 	    port: 443
 	};
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	const Qlik = __webpack_require__(1);
+
+	Qlik.then(function(q) {
+	    // Fetch the current open app;
+	    var app = q.currApp();
+	    console.log('From other file', app)
+	    
+	})
 
 /***/ }
 /******/ ]);
